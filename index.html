@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mateo Lopez - Rumbo al Mundial de Waterpolo Sub-18</title>
+    <meta name="description" content="Ayud&aacute; a Mateo Lopez a representar a la Argentina en el Mundial Sub-18 de Waterpolo en Portugal 2026.">
+    <meta property="og:title" content="Mateo Lopez - Rumbo al Mundial de Waterpolo Sub-18">
+    <meta property="og:description" content="Ayud&aacute; a Mateo a cumplir su sue&ntilde;o de competir en el Mundial Sub-18 de Waterpolo en Portugal.">
+    <meta property="og:image" content="assets/img1.jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --celeste: #75AADB;
+            --celeste-dark: #5a93c4;
+            --blue-deep: #1a3a5c;
+            --blue-darker: #0f2744;
+            --gold: #f5c542;
+            --gold-dark: #d4a832;
+            --white: #ffffff;
+            --gray-50: #f8fafc;
+            --gray-100: #f1f5f9;
+            --gray-200: #e2e8f0;
+            --gray-300: #cbd5e1;
+            --gray-600: #475569;
+            --gray-700: #334155;
+            --gray-800: #1e293b;
+            --green: #22c55e;
+            --radius: 16px;
+            --shadow: 0 4px 24px rgba(0,0,0,0.08);
+            --shadow-lg: 0 8px 40px rgba(0,0,0,0.12);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--gray-50);
+            color: var(--gray-800);
+            line-height: 1.6;
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            min-height: 85vh;
+            display: flex;
+            align-items: flex-end;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: url('assets/img1.jpeg') center/cover no-repeat;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(15, 39, 68, 0.1) 0%,
+                rgba(15, 39, 68, 0.4) 40%,
+                rgba(15, 39, 68, 0.85) 75%,
+                rgba(15, 39, 68, 0.95) 100%
+            );
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px 60px;
+            color: white;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--blue-darker);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 6px 16px;
+            border-radius: 100px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.2rem, 6vw, 3.8rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 12px;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+        }
+
+        .hero-sub {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            opacity: 0.9;
+            font-weight: 400;
+            max-width: 600px;
+        }
+
+        /* Progress section */
+        .progress-section {
+            max-width: 900px;
+            margin: -40px auto 0;
+            padding: 0 24px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .progress-card {
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-lg);
+            padding: 36px;
+        }
+
+        .progress-top {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .progress-info h3 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--gray-600);
+            margin-bottom: 8px;
+        }
+
+        .progress-amounts {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .progress-current {
+            font-size: 2.4rem;
+            font-weight: 900;
+            color: var(--blue-deep);
+        }
+
+        .progress-goal {
+            font-size: 1rem;
+            color: var(--gray-600);
+        }
+
+        .progress-bar-track {
+            width: 100%;
+            height: 14px;
+            background: var(--gray-200);
+            border-radius: 100px;
+            overflow: hidden;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--celeste), var(--celeste-dark));
+            border-radius: 100px;
+            width: 0%;
+            transition: width 1.5s ease-out;
+        }
+
+        .progress-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: var(--gray-600);
+        }
+
+        .progress-percent-badge {
+            background: var(--celeste);
+            color: white;
+            padding: 2px 10px;
+            border-radius: 100px;
+            font-weight: 700;
+            font-size: 0.8rem;
+        }
+
+        .donate-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            min-width: 220px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 28px;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+        }
+
+        .btn-mp {
+            background: #009ee3;
+            color: white;
+        }
+
+        .btn-mp:hover {
+            background: #0087c9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0,158,227,0.3);
+        }
+
+        .btn-icon {
+            width: 22px;
+            height: 22px;
+        }
+
+        /* Supporters section */
+        .supporters-section {
+            max-width: 900px;
+            margin: 32px auto 0;
+            padding: 0 24px;
+        }
+
+        .supporters-card {
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 36px;
+        }
+
+        .supporters-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .supporters-header h2 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--blue-deep);
+        }
+
+        .supporters-count {
+            background: var(--gray-100);
+            padding: 4px 14px;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--gray-600);
+        }
+
+        .supporters-tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--gray-100);
+            padding-bottom: 0;
+        }
+
+        .supporters-tab {
+            padding: 8px 16px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--gray-600);
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            margin-bottom: -2px;
+            transition: all 0.2s;
+            background: none;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+
+        .supporters-tab.active {
+            color: var(--celeste-dark);
+            border-bottom-color: var(--celeste);
+        }
+
+        .supporters-tab:hover {
+            color: var(--celeste-dark);
+        }
+
+        .supporter-list {
+            list-style: none;
+        }
+
+        .supporter-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--gray-100);
+        }
+
+        .supporter-item:last-child {
+            border-bottom: none;
+        }
+
+        .supporter-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--celeste), var(--celeste-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .supporter-avatar.anonymous {
+            background: var(--gray-300);
+            color: var(--gray-600);
+        }
+
+        .supporter-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .supporter-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 12px;
+            margin-bottom: 2px;
+        }
+
+        .supporter-name {
+            font-weight: 700;
+            color: var(--gray-800);
+            font-size: 0.95rem;
+        }
+
+        .supporter-amount {
+            font-weight: 800;
+            color: var(--green);
+            font-size: 0.95rem;
+            white-space: nowrap;
+        }
+
+        .supporter-message {
+            color: var(--gray-600);
+            font-size: 0.9rem;
+            font-style: italic;
+            margin-top: 4px;
+            line-height: 1.4;
+        }
+
+        .supporter-date {
+            font-size: 0.8rem;
+            color: var(--gray-300);
+            margin-top: 4px;
+        }
+
+        .whatsapp-notice {
+            margin-top: 20px;
+            padding: 16px 20px;
+            background: #dcfce7;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .whatsapp-notice p {
+            font-size: 0.9rem;
+            color: var(--gray-700);
+            margin: 0;
+        }
+
+        .whatsapp-notice a {
+            color: #16a34a;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .whatsapp-notice a:hover {
+            text-decoration: underline;
+        }
+
+        /* Sponsors section */
+        .sponsors-section {
+            max-width: 900px;
+            margin: 32px auto 0;
+            padding: 0 24px;
+        }
+
+        .sponsors-card {
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 36px;
+        }
+
+        .sponsors-card h2 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--blue-deep);
+            margin-bottom: 24px;
+        }
+
+        .sponsors-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sponsor-item {
+            background: var(--gray-50);
+            border-radius: 12px;
+            padding: 20px 32px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            transition: transform 0.2s ease;
+        }
+
+        .sponsor-item:hover {
+            transform: translateY(-2px);
+        }
+
+        .sponsor-item img {
+            max-height: 60px;
+            max-width: 160px;
+            object-fit: contain;
+        }
+
+        .sponsor-item span {
+            font-weight: 700;
+            color: var(--gray-800);
+            font-size: 1rem;
+        }
+
+        .no-supporters {
+            text-align: center;
+            padding: 32px 0;
+            color: var(--gray-600);
+        }
+
+        .no-supporters .emoji {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+        }
+
+        .no-supporters p {
+            font-size: 0.95rem;
+        }
+
+        .view-more-btn {
+            display: none;
+            width: 100%;
+            padding: 12px;
+            margin-top: 16px;
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: 10px;
+            color: var(--gray-600);
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .view-more-btn:hover {
+            background: var(--gray-100);
+        }
+
+        .view-more-btn.visible {
+            display: block;
+        }
+
+        /* Story section */
+        .story-section {
+            max-width: 900px;
+            margin: 48px auto;
+            padding: 0 24px;
+        }
+
+        .story-card {
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 48px;
+        }
+
+        .story-card h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--blue-deep);
+            margin-bottom: 24px;
+        }
+
+        .story-card p {
+            color: var(--gray-700);
+            font-size: 1.05rem;
+            margin-bottom: 16px;
+            line-height: 1.75;
+        }
+
+        .story-card p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .story-highlight {
+            background: linear-gradient(135deg, #f0f7ff, #e8f4fd);
+            border-left: 4px solid var(--celeste);
+            padding: 20px 24px;
+            border-radius: 0 12px 12px 0;
+            margin: 24px 0;
+            font-style: italic;
+            color: var(--blue-deep);
+        }
+
+        /* Gallery */
+        .gallery-section {
+            max-width: 900px;
+            margin: 0 auto 48px;
+            padding: 0 24px;
+        }
+
+        .gallery-section h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--blue-deep);
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.03);
+        }
+
+        /* Breakdown */
+        .breakdown-section {
+            max-width: 900px;
+            margin: 0 auto 48px;
+            padding: 0 24px;
+        }
+
+        .breakdown-card {
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 48px;
+        }
+
+        .breakdown-card h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--blue-deep);
+            margin-bottom: 8px;
+        }
+
+        .breakdown-card > p {
+            color: var(--gray-600);
+            margin-bottom: 24px;
+        }
+
+        .breakdown-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        .breakdown-item {
+            background: var(--gray-50);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .breakdown-item .icon {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        .breakdown-item .label {
+            font-size: 0.85rem;
+            color: var(--gray-600);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .breakdown-item .amount {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--blue-deep);
+        }
+
+        /* How to donate section */
+        .how-section {
+            max-width: 900px;
+            margin: 0 auto 48px;
+            padding: 0 24px;
+        }
+
+        .how-card {
+            background: linear-gradient(135deg, var(--blue-deep), var(--blue-darker));
+            border-radius: var(--radius);
+            padding: 48px;
+            color: white;
+        }
+
+        .how-card h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        .how-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .how-option {
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 32px;
+            text-align: center;
+            backdrop-filter: blur(4px);
+        }
+
+        .how-option h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .how-option p {
+            font-size: 0.9rem;
+            opacity: 0.85;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .how-option .flag {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .how-option .btn {
+            width: 100%;
+        }
+
+        /* CTA final */
+        .cta-section {
+            max-width: 900px;
+            margin: 0 auto 60px;
+            padding: 0 24px;
+            text-align: center;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            color: var(--gray-600);
+            margin-bottom: 24px;
+        }
+
+        .cta-section .btn-row {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .share-btn {
+            background: var(--gray-100);
+            color: var(--gray-700);
+            border: 1px solid var(--gray-200);
+        }
+
+        .share-btn:hover {
+            background: var(--gray-200);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 32px 24px;
+            color: var(--gray-600);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.9);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90vw;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .progress-top {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .donate-buttons {
+                min-width: unset;
+                flex-direction: row;
+            }
+
+            .donate-buttons .btn {
+                flex: 1;
+                padding: 14px 16px;
+                font-size: 0.9rem;
+            }
+
+            .story-card, .breakdown-card {
+                padding: 32px 24px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .how-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .how-card {
+                padding: 32px 24px;
+            }
+
+            .supporters-card {
+                padding: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .donate-buttons {
+                flex-direction: column;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 8px;
+            }
+
+            .supporter-top {
+                flex-direction: column;
+                gap: 2px;
+            }
+        }
+
+        /* Animation on scroll */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <span class="hero-badge">Mundial Sub-18 &middot; Portugal 2026</span>
+        <h1>Mateo L&oacute;pez</h1>
+        <p class="hero-sub">Ayudalo a cumplir su sue&ntilde;o de competir en el Mundial de Waterpolo</p>
+    </div>
+</section>
+
+<!-- Progress -->
+<section class="progress-section">
+    <div class="progress-card fade-in">
+        <div class="progress-top">
+            <div class="progress-info">
+                <h3>Objetivo de recaudaci&oacute;n</h3>
+                <div class="progress-amounts">
+                    <span class="progress-current" id="raised">$0</span>
+                    <span class="progress-goal">de <strong>USD $4.000</strong></span>
+                </div>
+                <div class="progress-bar-track">
+                    <div class="progress-bar-fill" id="progressBar"></div>
+                </div>
+                <div class="progress-stats">
+                    <span><span id="donorCount">0</span> colaboradores</span>
+                    <span class="progress-percent-badge"><span id="progressPercent">0</span>%</span>
+                </div>
+            </div>
+            <div class="donate-buttons">
+                <a href="#donar" class="btn btn-mp">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M11.5 2C6.81 2 3 5.81 3 10.5S6.81 19 11.5 19h.5v3l3-4.03c2.85-1.5 4.5-4.53 4.5-7.97C19.5 5.81 15.69 2 11 2h.5zm-1 12h-2v-2h2v2zm0-3h-2V6h2v5z"/></svg>
+                    Quiero colaborar
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Supporters -->
+<section class="supporters-section">
+    <div class="supporters-card fade-in">
+        <div class="supporters-header">
+            <h2>Colaboradores</h2>
+            <span class="supporters-count" id="supportersCountBadge">0 donaciones</span>
+        </div>
+        <div class="supporters-tabs">
+            <button class="supporters-tab active" data-sort="recent">M&aacute;s recientes</button>
+            <button class="supporters-tab" data-sort="top">Mayores aportes</button>
+        </div>
+        <ul class="supporter-list" id="supporterList">
+            <!-- Populated by JS -->
+        </ul>
+        <button class="view-more-btn" id="viewMoreBtn" onclick="showAllDonors()">Ver m&aacute;s colaboradores</button>
+        <div class="whatsapp-notice">
+            <p>&iquest;Donaste? <a href="https://wa.me/5493425099127?text=Hola%20Mateo!%20Hice%20una%20donaci%C3%B3n%20para%20tu%20viaje%20al%20mundial" target="_blank" rel="noopener">Cont&aacute;le a Mateo por WhatsApp</a> para que te agregue a la lista de colaboradores y compart&iacute;le tu mensaje de apoyo.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Sponsors -->
+<section class="sponsors-section" id="sponsorsSection" style="display:none;">
+    <div class="sponsors-card fade-in">
+        <h2>Sponsors</h2>
+        <div class="sponsors-grid" id="sponsorsGrid">
+            <!-- Populated by JS -->
+        </div>
+    </div>
+</section>
+
+<!-- Story -->
+<section class="story-section">
+    <div class="story-card fade-in">
+        <h2>Mi historia</h2>
+        <p>Mi nombre es Mateo L&oacute;pez y juego en Regatas de Santa Fe. Llevo casi 10 a&ntilde;os jugando al waterpolo y poniendo todo mi esfuerzo d&iacute;a a d&iacute;a. Con el paso de los a&ntilde;os, ese juego se transform&oacute; en una pasi&oacute;n y hoy, a mis 17 a&ntilde;os, tengo la posibilidad de competir en el m&aacute;ximo nivel.</p>
+
+        <div class="story-highlight">
+            Este a&ntilde;o fui convocado al Mundial Sub-18 en Portugal. Es una oportunidad &uacute;nica, no solo para crecer como deportista, sino tambi&eacute;n para representar a mi pa&iacute;s en la competencia m&aacute;s importante de la categor&iacute;a.
+        </div>
+
+        <p>Sin embargo, llegar hasta ah&iacute; implica afrontar gastos muy importantes. Como ocurre en gran parte del waterpolo argentino, los costos del viaje deben ser cubiertos por los propios jugadores y sus familias. Por eso decid&iacute; abrir este espacio y pedir colaboraci&oacute;n a quienes quieran acompa&ntilde;arme en este desaf&iacute;o.</p>
+
+        <p><strong>Cada aporte, sin importar su tama&ntilde;o, me acerca un poco m&aacute;s a cumplir este objetivo.</strong></p>
+
+        <p>Gracias por formar parte de este sue&ntilde;o y por ayudarme a llevar los colores de Argentina a Portugal.</p>
+    </div>
+</section>
+
+<!-- Gallery -->
+<section class="gallery-section fade-in">
+    <h2>En acci&oacute;n</h2>
+    <div class="gallery-grid">
+        <img src="assets/img2.jpeg" alt="Mateo jugando waterpolo" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="assets/img3.jpeg" alt="Mateo en competencia" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="assets/img4.jpeg" alt="Mateo en partido" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="assets/img5.jpeg" alt="Mateo en la pileta" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="assets/img6.jpeg" alt="Mateo en acci&oacute;n" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="assets/img7.jpeg" alt="Mateo entrenando" loading="lazy" onclick="openLightbox(this.src)">
+    </div>
+</section>
+
+<!-- Cost Breakdown -->
+<section class="breakdown-section">
+    <div class="breakdown-card fade-in">
+        <h2>Destino de los fondos</h2>
+        <p>Son 15 jugadores y 1 oficial. El delegado abona su propio pasaje. El costo por jugador es de <strong>USD $4.000</strong>.</p>
+        <div class="breakdown-items">
+            <div class="breakdown-item">
+                <div class="icon">&#9992;&#65039;</div>
+                <div class="label">A&eacute;reos</div>
+                <div class="amount">$1.460</div>
+            </div>
+            <div class="breakdown-item">
+                <div class="icon">&#127976;</div>
+                <div class="label">Alojamiento torneo</div>
+                <div class="amount">$1.992</div>
+            </div>
+            <div class="breakdown-item">
+                <div class="icon">&#127860;&#65039;</div>
+                <div class="label">Comidas</div>
+                <div class="amount">$169</div>
+            </div>
+            <div class="breakdown-item">
+                <div class="icon">&#9749;</div>
+                <div class="label">Meriendas torneo</div>
+                <div class="amount">$95</div>
+            </div>
+            <div class="breakdown-item">
+                <div class="icon">&#127869;&#65039;</div>
+                <div class="label">Seguro m&eacute;dico</div>
+                <div class="amount">$137</div>
+            </div>
+            <div class="breakdown-item">
+                <div class="icon">&#128085;</div>
+                <div class="label">Indumentarias</div>
+                <div class="amount">$79</div>
+            </div>
+            <div class="breakdown-item">
+                <div class="icon">&#128203;</div>
+                <div class="label">Imprevistos</div>
+                <div class="amount">$68</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How to Donate -->
+<section class="how-section" id="donar">
+    <div class="how-card fade-in">
+        <h2>&iquest;C&oacute;mo colaborar?</h2>
+        <div class="how-grid" style="grid-template-columns: 1fr;">
+            <div class="how-option">
+                <div class="flag">&#127462;&#127479; &#128181;</div>
+                <h3>Transferencia en d&oacute;lares</h3>
+                <p>Transfer&iacute; d&oacute;lares directamente a la cuenta de <strong>Mateo L&oacute;pez</strong>.</p>
+                <div style="background: rgba(255,255,255,0.15); border-radius: 8px; padding: 12px 16px; font-family: monospace; font-size: 0.85rem; word-break: break-all; margin-bottom: 16px;">
+                    CBU: 2850371220094847862264
+                </div>
+                <button class="btn btn-mp" onclick="navigator.clipboard.writeText('2850371220094847862264').then(() => { this.textContent = '\u2713 CBU copiado!'; setTimeout(() => { this.textContent = 'Copiar CBU'; }, 2000); })">
+                    Copiar CBU
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section fade-in">
+    <p>Si no pod&eacute;s colaborar econ&oacute;micamente, <strong>compartir esta p&aacute;gina</strong> tambi&eacute;n ayuda un mont&oacute;n.</p>
+    <div class="btn-row">
+        <a href="#" class="btn share-btn" onclick="shareWhatsApp(); return false;">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+        </a>
+        <a href="#" class="btn share-btn" onclick="shareTwitter(); return false;">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            Twitter / X
+        </a>
+        <a href="#" class="btn share-btn" onclick="copyLink(); return false;" id="copyBtn">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+            Copiar enlace
+        </a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>Hecho con &#10084;&#65039; para Mateo &middot; Toda donaci&oacute;n se destina &iacute;ntegramente a costear el viaje al Mundial Sub-18 de Waterpolo en Portugal 2026</p>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightboxImg" src="" alt="Foto ampliada">
+</div>
+
+<script>
+    // =============================================
+    // DONATION DATA - loaded from data/donations.json
+    // To add a new donation, edit data/donations.json
+    // =============================================
+    let donationData = { goal: 4000, donations: [] };
+    let showingAll = false;
+    const INITIAL_SHOW = 5;
+
+    // Load donation data
+    fetch('data/donations.json')
+        .then(r => r.json())
+        .then(data => {
+            donationData = data;
+            initPage();
+        })
+        .catch(() => {
+            // Fallback if JSON fails to load
+            initPage();
+        });
+
+    function initPage() {
+        const goal = donationData.goal;
+        const totalRaised = donationData.donations.reduce((sum, d) => sum + d.amount, 0);
+        const percent = Math.min(Math.round((totalRaised / goal) * 100), 100);
+        const donorCount = donationData.donations.length;
+
+        // Animate progress
+        setTimeout(() => {
+            document.getElementById('progressBar').style.width = percent + '%';
+            animateCounter('raised', totalRaised);
+            animateCounter('progressPercent', percent, false);
+        }, 500);
+
+        document.getElementById('donorCount').textContent = donorCount;
+        document.getElementById('supportersCountBadge').textContent =
+            donorCount + (donorCount === 1 ? ' donaci\u00f3n' : ' donaciones');
+
+        renderSupporters('recent');
+        renderSponsors();
+    }
+
+    function renderSponsors() {
+        const sponsors = donationData.sponsors || [];
+        if (sponsors.length === 0) return;
+
+        document.getElementById('sponsorsSection').style.display = '';
+        const grid = document.getElementById('sponsorsGrid');
+        grid.innerHTML = sponsors.map(s => `
+            <div class="sponsor-item">
+                <img src="assets/${escapeHtml(s.image)}" alt="${escapeHtml(s.name)}">
+                <span>${escapeHtml(s.name)}</span>
+            </div>
+        `).join('');
+    }
+
+    function renderSupporters(sort) {
+        const list = document.getElementById('supporterList');
+        const viewMoreBtn = document.getElementById('viewMoreBtn');
+        let donations = [...donationData.donations];
+
+        if (sort === 'top') {
+            donations.sort((a, b) => b.amount - a.amount);
+        } else {
+            donations.sort((a, b) => new Date(b.date) - new Date(a.date));
+        }
+
+        if (donations.length === 0) {
+            list.innerHTML = `
+                <li class="no-supporters">
+                    <div class="emoji">&#127944;</div>
+                    <p><strong>&iexcl;S&eacute; el primero en colaborar!</strong></p>
+                    <p>Tu donaci&oacute;n aparecer&aacute; aqu&iacute;.</p>
+                </li>`;
+            viewMoreBtn.classList.remove('visible');
+            return;
+        }
+
+        const toShow = showingAll ? donations : donations.slice(0, INITIAL_SHOW);
+
+        list.innerHTML = toShow.map(d => {
+            const initial = d.name === 'An\u00f3nimo' ? '?' : d.name.charAt(0).toUpperCase();
+            const avatarClass = d.name === 'An\u00f3nimo' ? 'supporter-avatar anonymous' : 'supporter-avatar';
+            const dateFormatted = formatDate(d.date);
+            const amountStr = d.amount ? '$' + d.amount.toLocaleString('en-US') : '';
+
+            return `
+                <li class="supporter-item">
+                    <div class="${avatarClass}">${initial}</div>
+                    <div class="supporter-info">
+                        <div class="supporter-top">
+                            <span class="supporter-name">${escapeHtml(d.name)}</span>
+                            <span class="supporter-amount">${amountStr}</span>
+                        </div>
+                        ${d.message ? `<p class="supporter-message">"${escapeHtml(d.message)}"</p>` : ''}
+                        <span class="supporter-date">${dateFormatted}</span>
+                    </div>
+                </li>`;
+        }).join('');
+
+        if (donations.length > INITIAL_SHOW && !showingAll) {
+            viewMoreBtn.classList.add('visible');
+            viewMoreBtn.textContent = `Ver ${donations.length - INITIAL_SHOW} colaboradores m\u00e1s`;
+        } else {
+            viewMoreBtn.classList.remove('visible');
+        }
+    }
+
+    function showAllDonors() {
+        showingAll = true;
+        const activeTab = document.querySelector('.supporters-tab.active');
+        renderSupporters(activeTab.dataset.sort);
+    }
+
+    // Tab switching
+    document.querySelectorAll('.supporters-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+            document.querySelectorAll('.supporters-tab').forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            showingAll = false;
+            renderSupporters(tab.dataset.sort);
+        });
+    });
+
+    function formatDate(dateStr) {
+        const months = ['enero','febrero','marzo','abril','mayo','junio',
+                        'julio','agosto','septiembre','octubre','noviembre','diciembre'];
+        const d = new Date(dateStr + 'T00:00:00');
+        return months[d.getMonth()] + ' ' + d.getFullYear();
+    }
+
+    function escapeHtml(str) {
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
+
+    function animateCounter(id, target, isCurrency = true) {
+        const el = document.getElementById(id);
+        if (target === 0) {
+            el.textContent = isCurrency ? '$0' : '0';
+            return;
+        }
+        let current = 0;
+        const step = Math.max(1, Math.floor(target / 60));
+        const timer = setInterval(() => {
+            current += step;
+            if (current >= target) {
+                current = target;
+                clearInterval(timer);
+            }
+            el.textContent = isCurrency
+                ? '$' + current.toLocaleString('en-US')
+                : current;
+        }, 20);
+    }
+
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Lightbox
+    function openLightbox(src) {
+        document.getElementById('lightboxImg').src = src;
+        document.getElementById('lightbox').classList.add('active');
+    }
+
+    function closeLightbox() {
+        document.getElementById('lightbox').classList.remove('active');
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeLightbox();
+    });
+
+    // Share functions
+    function shareWhatsApp() {
+        const text = encodeURIComponent('Ayud\u00e1 a Mateo L\u00f3pez a llegar al Mundial Sub-18 de Waterpolo en Portugal \uD83E\uDD3D\u200D\u2642\uFE0F\uD83C\uDDE6\uD83C\uDDF7 ' + window.location.href);
+        window.open('https://wa.me/?text=' + text, '_blank');
+    }
+
+    function shareTwitter() {
+        const text = encodeURIComponent('Ayud\u00e1 a Mateo L\u00f3pez a llegar al Mundial Sub-18 de Waterpolo en Portugal \uD83E\uDD3D\u200D\u2642\uFE0F\uD83C\uDDE6\uD83C\uDDF7');
+        const url = encodeURIComponent(window.location.href);
+        window.open('https://twitter.com/intent/tweet?text=' + text + '&url=' + url, '_blank');
+    }
+
+    function copyLink() {
+        navigator.clipboard.writeText(window.location.href).then(() => {
+            const btn = document.getElementById('copyBtn');
+            const original = btn.innerHTML;
+            btn.innerHTML = '\u2713 \u00a1Copiado!';
+            setTimeout(() => btn.innerHTML = original, 2000);
+        });
+    }
+</script>
+
+</body>
+</html>
