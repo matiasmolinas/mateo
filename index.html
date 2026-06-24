@@ -530,6 +530,62 @@
             color: var(--blue-deep);
         }
 
+        /* Thanks / Team photo */
+        .thanks-section {
+            max-width: 900px;
+            margin: 48px auto;
+            padding: 0 24px;
+        }
+
+        .thanks-card {
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 48px;
+            text-align: center;
+        }
+
+        .thanks-badge {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--blue-darker);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 6px 16px;
+            border-radius: 100px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 16px;
+        }
+
+        .thanks-card h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--blue-deep);
+            margin-bottom: 24px;
+        }
+
+        .thanks-card img {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .thanks-card img:hover {
+            transform: scale(1.01);
+        }
+
+        .thanks-card p {
+            color: var(--gray-700);
+            font-size: 1.05rem;
+            line-height: 1.75;
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
         /* Gallery */
         .gallery-section {
             max-width: 900px;
@@ -897,6 +953,16 @@
         <p><strong>Cada aporte, sin importar su tama&ntilde;o, me acerca un poco m&aacute;s a cumplir este objetivo.</strong></p>
 
         <p>Gracias por formar parte de este sue&ntilde;o y por ayudarme a llevar los colores de Argentina a Portugal.</p>
+    </div>
+</section>
+
+<!-- Gracias / Selección -->
+<section class="thanks-section">
+    <div class="thanks-card fade-in">
+        <span class="thanks-badge">&iexcl;Hoy empieza el viaje! &#127462;&#127479;</span>
+        <h2>&iexcl;Gracias a todos los que lo hicieron posible!</h2>
+        <img src="assets/seleccion.jpeg" alt="La Selecci&oacute;n Argentina Sub-18 de Waterpolo lista para viajar al Mundial" loading="lazy" onclick="openLightbox(this.src)">
+        <p>Hoy la Selecci&oacute;n Argentina Sub-18 de Waterpolo comienza el viaje rumbo al Mundial en Portugal. Este sue&ntilde;o se hace realidad gracias a cada persona que colabor&oacute;, comparti&oacute; y nos acompa&ntilde;&oacute; en el camino. <strong>&iexcl;Gracias de coraz&oacute;n!</strong> &#129341;&#8205;&#9794;&#65039;&#127462;&#127479;</p>
     </div>
 </section>
 
