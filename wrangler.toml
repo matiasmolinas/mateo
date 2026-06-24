@@ -1,0 +1,8 @@
+name = "mateo"
+compatibility_date = "2026-06-06"
+compatibility_flags = ["nodejs_compat"]
+
+# Sitio estático servido como Worker con assets.
+# Los archivos del sitio (index.html, assets/, data/) están en la raíz del repo.
+[assets]
+directory = "./"

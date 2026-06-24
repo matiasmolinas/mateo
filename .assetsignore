@@ -1,0 +1,7 @@
+.git
+.gitignore
+.assetsignore
+wrangler.toml
+.DS_Store
+.claude
+node_modules
