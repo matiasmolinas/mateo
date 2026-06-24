@@ -26,6 +26,28 @@
       "amount": 100,
       "date": "2026-06-02",
       "message": "Arrancamos esta campaña con todo! Vamos Mateo!"
+    },
+    {
+      "name": "Santiago Bernasconi",
+      "amount": 20,
+      "date": "2026-06-24",
+      "message": "Hola Mateo! Hice una donación para tu viaje al mundial"
+    },
+    {
+      "name": "Martín López",
+      "amount": 150,
+      "date": "2026-06-24",
+      "message": "Vamos Mateo!!! te admiro y te apoyo, sos un grande!!! muchos éxitos en este nuevo desafío, estoy seguro que te va a ir muy bien!! Te mando un beso y un abrazo enorme a la distancia. Te quiero mucho. Tu tío Martín."
+    },
+    {
+      "name": "Guillermo Roude",
+      "amount": 20,
+      "date": "2026-06-24"
+    },
+    {
+      "name": "Gonzalo Bauza",
+      "amount": 100,
+      "date": "2026-06-24"
     }
   ]
 }
