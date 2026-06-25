@@ -586,6 +586,28 @@
             margin: 0 auto;
         }
 
+        /* Colecta cerrada */
+        .closed-badge {
+            display: inline-block;
+            background: var(--green);
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 100px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .btn-closed {
+            background: var(--gray-100);
+            color: var(--gray-600);
+            border: 1px solid var(--gray-200);
+            cursor: default;
+            pointer-events: none;
+        }
+
         /* Gallery */
         .gallery-section {
             max-width: 900px;
@@ -879,12 +901,23 @@
     </div>
 </section>
 
+<!-- Gracias / Selección -->
+<section class="thanks-section">
+    <div class="thanks-card fade-in">
+        <span class="thanks-badge">&iexcl;Hoy comienza el viaje! &#127462;&#127479;</span>
+        <h2>&iexcl;Gracias a todos los que lo hicieron posible!</h2>
+        <img src="assets/seleccion.jpeg" alt="La Selecci&oacute;n Argentina Sub-18 de Waterpolo lista para viajar al Mundial" loading="lazy" onclick="openLightbox(this.src)">
+        <p>Hoy la Selecci&oacute;n Argentina Sub-18 de Waterpolo comienza el viaje rumbo al Mundial en Portugal. <strong>La colecta ya est&aacute; cerrada</strong> y este sue&ntilde;o se hace realidad gracias a cada persona que colabor&oacute;, comparti&oacute; y nos acompa&ntilde;&oacute; en el camino. En los pr&oacute;ximos d&iacute;as vamos a subir fotos y videos del Mundial para compartir esta experiencia con ustedes. <strong>&iexcl;Gracias de coraz&oacute;n!</strong> &#129341;&#8205;&#9794;&#65039;&#127462;&#127479;</p>
+    </div>
+</section>
+
 <!-- Progress -->
 <section class="progress-section">
     <div class="progress-card fade-in">
         <div class="progress-top">
             <div class="progress-info">
-                <h3>Objetivo de recaudaci&oacute;n</h3>
+                <span class="closed-badge">&#10003; Colecta cerrada</span>
+                <h3>Recaudaci&oacute;n final</h3>
                 <div class="progress-amounts">
                     <span class="progress-current" id="raised">$0</span>
                     <span class="progress-goal">de <strong>USD $4.000</strong></span>
@@ -898,10 +931,7 @@
                 </div>
             </div>
             <div class="donate-buttons">
-                <a href="#donar" class="btn btn-mp">
-                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M11.5 2C6.81 2 3 5.81 3 10.5S6.81 19 11.5 19h.5v3l3-4.03c2.85-1.5 4.5-4.53 4.5-7.97C19.5 5.81 15.69 2 11 2h.5zm-1 12h-2v-2h2v2zm0-3h-2V6h2v5z"/></svg>
-                    Quiero colaborar
-                </a>
+                <span class="btn btn-closed">&#10003; Colecta cerrada &middot; &iexcl;Gracias!</span>
             </div>
         </div>
     </div>
@@ -953,16 +983,6 @@
         <p><strong>Cada aporte, sin importar su tama&ntilde;o, me acerca un poco m&aacute;s a cumplir este objetivo.</strong></p>
 
         <p>Gracias por formar parte de este sue&ntilde;o y por ayudarme a llevar los colores de Argentina a Portugal.</p>
-    </div>
-</section>
-
-<!-- Gracias / Selección -->
-<section class="thanks-section">
-    <div class="thanks-card fade-in">
-        <span class="thanks-badge">&iexcl;Hoy empieza el viaje! &#127462;&#127479;</span>
-        <h2>&iexcl;Gracias a todos los que lo hicieron posible!</h2>
-        <img src="assets/seleccion.jpeg" alt="La Selecci&oacute;n Argentina Sub-18 de Waterpolo lista para viajar al Mundial" loading="lazy" onclick="openLightbox(this.src)">
-        <p>Hoy la Selecci&oacute;n Argentina Sub-18 de Waterpolo comienza el viaje rumbo al Mundial en Portugal. Este sue&ntilde;o se hace realidad gracias a cada persona que colabor&oacute;, comparti&oacute; y nos acompa&ntilde;&oacute; en el camino. <strong>&iexcl;Gracias de coraz&oacute;n!</strong> &#129341;&#8205;&#9794;&#65039;&#127462;&#127479;</p>
     </div>
 </section>
 
@@ -1027,18 +1047,13 @@
 <!-- How to Donate -->
 <section class="how-section" id="donar">
     <div class="how-card fade-in">
-        <h2>&iquest;C&oacute;mo colaborar?</h2>
+        <h2>Colecta cerrada</h2>
         <div class="how-grid" style="grid-template-columns: 1fr;">
             <div class="how-option">
-                <div class="flag">&#127462;&#127479; &#128181;</div>
-                <h3>Transferencia en d&oacute;lares</h3>
-                <p>Transfer&iacute; d&oacute;lares directamente a la cuenta de <strong>Mateo L&oacute;pez</strong>.</p>
-                <div style="background: rgba(255,255,255,0.15); border-radius: 8px; padding: 12px 16px; font-family: monospace; font-size: 0.85rem; word-break: break-all; margin-bottom: 16px;">
-                    CBU: 2850371220094847862264
-                </div>
-                <button class="btn btn-mp" onclick="navigator.clipboard.writeText('2850371220094847862264').then(() => { this.textContent = '\u2713 CBU copiado!'; setTimeout(() => { this.textContent = 'Copiar CBU'; }, 2000); })">
-                    Copiar CBU
-                </button>
+                <div class="flag">&#10003; &#127462;&#127479;</div>
+                <h3>&iexcl;Gracias por tu apoyo!</h3>
+                <p>La colecta ya est&aacute; cerrada. Gracias a todos los que colaboraron, Mateo ya viaja rumbo al Mundial. En los pr&oacute;ximos d&iacute;as compartiremos fotos y videos de la experiencia.</p>
+                <span class="btn btn-closed">Colecta cerrada</span>
             </div>
         </div>
     </div>
