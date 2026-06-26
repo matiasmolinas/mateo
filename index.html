@@ -875,6 +875,163 @@
             }
         }
 
+        /* Timeline */
+        .timeline-section {
+            max-width: 900px;
+            margin: 40px auto 0;
+            padding: 0 24px;
+        }
+
+        .timeline-section > h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--blue-deep);
+            text-align: center;
+            margin-bottom: 6px;
+        }
+
+        .timeline-intro {
+            text-align: center;
+            color: var(--gray-600);
+            margin-bottom: 28px;
+        }
+
+        .tl-entry {
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 32px;
+            margin-bottom: 24px;
+            border-left: 4px solid var(--celeste);
+        }
+
+        .tl-entry.live {
+            border-left-color: #e0245e;
+        }
+
+        .tl-when {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--celeste-dark);
+            margin-bottom: 6px;
+        }
+
+        .tl-entry h3 {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--blue-deep);
+            margin-bottom: 14px;
+            line-height: 1.3;
+        }
+
+        .tl-entry p {
+            color: var(--gray-700);
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .tl-entry p:last-child { margin-bottom: 0; }
+
+        .live-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: #e0245e;
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 5px 13px;
+            border-radius: 100px;
+            margin-bottom: 12px;
+        }
+
+        .live-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: white;
+            animation: pulse 1.4s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.25; }
+        }
+
+        /* YouTube embed (responsive 16:9) */
+        .video-embed {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin-top: 8px;
+        }
+
+        .video-embed iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Fotos y videos del día */
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-top: 8px;
+        }
+
+        .media-grid img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .media-grid img:hover { transform: scale(1.03); }
+
+        .media-videos {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 12px;
+        }
+
+        .media-videos video {
+            width: 100%;
+            max-height: 520px;
+            border-radius: 12px;
+            background: #000;
+        }
+
+        .tl-img {
+            width: 100%;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .tl-img:hover { transform: scale(1.01); }
+
+        @media (max-width: 768px) {
+            .tl-entry { padding: 24px; }
+            .media-grid { grid-template-columns: repeat(2, 1fr); }
+            .media-videos { grid-template-columns: 1fr; }
+        }
+
         /* Animation on scroll */
         .fade-in {
             opacity: 0;
@@ -897,43 +1054,60 @@
     <div class="hero-content">
         <span class="hero-badge">Mundial Sub-18 &middot; Portugal 2026</span>
         <h1>Mateo L&oacute;pez</h1>
-        <p class="hero-sub">Ayudalo a cumplir su sue&ntilde;o de competir en el Mundial de Waterpolo</p>
+        <p class="hero-sub">Segu&iacute; el d&iacute;a a d&iacute;a de Mateo y la Selecci&oacute;n en el Mundial de Waterpolo</p>
     </div>
 </section>
 
-<!-- Gracias / Selección -->
-<section class="thanks-section">
-    <div class="thanks-card fade-in">
-        <span class="thanks-badge">&iexcl;Hoy comienza el viaje! &#127462;&#127479;</span>
-        <h2>&iexcl;Gracias a todos los que lo hicieron posible!</h2>
-        <img src="assets/seleccion.jpeg" alt="La Selecci&oacute;n Argentina Sub-18 de Waterpolo lista para viajar al Mundial" loading="lazy" onclick="openLightbox(this.src)">
-        <p>Hoy la Selecci&oacute;n Argentina Sub-18 de Waterpolo comienza el viaje rumbo al Mundial en Portugal. <strong>La colecta ya est&aacute; cerrada</strong> y este sue&ntilde;o se hace realidad gracias a cada persona que colabor&oacute;, comparti&oacute; y nos acompa&ntilde;&oacute; en el camino. En los pr&oacute;ximos d&iacute;as vamos a subir fotos y videos del Mundial para compartir esta experiencia con ustedes. <strong>&iexcl;Gracias de coraz&oacute;n!</strong> &#129341;&#8205;&#9794;&#65039;&#127462;&#127479;</p>
-    </div>
-</section>
+<!-- Línea de tiempo -->
+<section class="timeline-section">
+    <h2>Camino al Mundial</h2>
+    <p class="timeline-intro">El d&iacute;a a d&iacute;a de Mateo y la Selecci&oacute;n en Portugal &middot; lo m&aacute;s reciente primero</p>
 
-<!-- Progress -->
-<section class="progress-section">
-    <div class="progress-card fade-in">
-        <div class="progress-top">
-            <div class="progress-info">
-                <span class="closed-badge">&#10003; Colecta cerrada</span>
-                <h3>Recaudaci&oacute;n final</h3>
-                <div class="progress-amounts">
-                    <span class="progress-current" id="raised">$0</span>
-                    <span class="progress-goal">de <strong>USD $4.000</strong></span>
-                </div>
-                <div class="progress-bar-track">
-                    <div class="progress-bar-fill" id="progressBar"></div>
-                </div>
-                <div class="progress-stats">
-                    <span><span id="donorCount">0</span> colaboradores</span>
-                    <span class="progress-percent-badge"><span id="progressPercent">0</span>%</span>
-                </div>
-            </div>
-            <div class="donate-buttons">
-                <span class="btn btn-closed">&#10003; Colecta cerrada &middot; &iexcl;Gracias!</span>
+    <div class="timeline">
+
+        <!-- Mañana: primera fecha + transmisión en vivo -->
+        <div class="tl-entry live fade-in">
+            <span class="live-badge"><span class="live-dot"></span> En vivo ma&ntilde;ana</span>
+            <span class="tl-when">Ma&ntilde;ana &middot; S&aacute;bado 27 &middot; Primera fecha</span>
+            <h3>&#129341;&#8205;&#9794;&#65039; Argentina vs Canad&aacute; &mdash; 9:30 (hora de Argentina)</h3>
+            <p>Ma&ntilde;ana s&aacute;bado arranca la primera fecha del Mundial. Mir&aacute; la transmisi&oacute;n en vivo de los partidos, incluido <strong>Argentina vs Canad&aacute;</strong> a las <strong>9:30 (hora de Argentina)</strong>.</p>
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/VgO8AOyUCDc" title="Transmisi&oacute;n en vivo &middot; Mundial Sub-18 de Waterpolo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
+
+        <!-- Fixture del grupo -->
+        <div class="tl-entry fade-in">
+            <span class="tl-when">Fixture &middot; Fase de grupos</span>
+            <h3>&#128197; Los partidos del grupo de Argentina</h3>
+            <p>Esta es la agenda completa de los partidos del grupo. Toc&aacute; la imagen para verla en grande.</p>
+            <img class="tl-img" src="assets/partidos-grupo.jpeg" alt="Fixture de los partidos del grupo de Argentina" loading="lazy" onclick="openLightbox(this.src)">
+        </div>
+
+        <!-- Hoy: último día de entrenamiento -->
+        <div class="tl-entry fade-in">
+            <span class="tl-when">Hoy &middot; Viernes 26 de junio</span>
+            <h3>&#127946; &Uacute;ltimo d&iacute;a de entrenamiento en Portugal</h3>
+            <p>&Uacute;ltimo entrenamiento antes del debut, en la misma pileta donde se juega el torneo. Fotos y videos de hoy:</p>
+            <div class="media-grid">
+                <img src="assets/entrenamiento-ultimo-dia/entrenamiento-1.jpeg" alt="Entrenamiento en la pileta del Mundial" loading="lazy" onclick="openLightbox(this.src)">
+                <img src="assets/entrenamiento-ultimo-dia/entrenamiento-2.jpeg" alt="Entrenamiento en la pileta del Mundial" loading="lazy" onclick="openLightbox(this.src)">
+                <img src="assets/entrenamiento-ultimo-dia/entrenamiento-3.jpeg" alt="Entrenamiento en la pileta del Mundial" loading="lazy" onclick="openLightbox(this.src)">
+            </div>
+            <div class="media-videos">
+                <video src="assets/entrenamiento-ultimo-dia/entrenamiento-video-1.mp4" controls preload="metadata" playsinline></video>
+                <video src="assets/entrenamiento-ultimo-dia/entrenamiento-video-2.mp4" controls preload="metadata" playsinline></video>
+            </div>
+        </div>
+
+        <!-- Comienza el viaje -->
+        <div class="tl-entry fade-in">
+            <span class="tl-when">Mi&eacute;rcoles 24 &middot; Comienza el viaje</span>
+            <h3>&#127462;&#127479; &iexcl;Rumbo al Mundial!</h3>
+            <img class="tl-img" src="assets/seleccion.jpeg" alt="La Selecci&oacute;n Argentina Sub-18 de Waterpolo lista para viajar al Mundial" loading="lazy" onclick="openLightbox(this.src)" style="margin-bottom:16px;">
+            <p>La Selecci&oacute;n Argentina Sub-18 de Waterpolo viaj&oacute; rumbo al Mundial en Portugal. <strong>La colecta ya est&aacute; cerrada</strong> y este sue&ntilde;o se hizo realidad gracias a cada persona que colabor&oacute;, comparti&oacute; y nos acompa&ntilde;&oacute; en el camino. <strong>&iexcl;Gracias de coraz&oacute;n!</strong></p>
+        </div>
+
     </div>
 </section>
 
@@ -953,7 +1127,7 @@
         </ul>
         <button class="view-more-btn" id="viewMoreBtn" onclick="showAllDonors()">Ver m&aacute;s colaboradores</button>
         <div class="whatsapp-notice">
-            <p>&iquest;Donaste? <a href="https://wa.me/5493425099127?text=Hola%20Mateo!%20Hice%20una%20donaci%C3%B3n%20para%20tu%20viaje%20al%20mundial" target="_blank" rel="noopener">Cont&aacute;le a Mateo por WhatsApp</a> para que te agregue a la lista de colaboradores y compart&iacute;le tu mensaje de apoyo.</p>
+            <p>&iexcl;Gracias a todos los que colaboraron! Cada aporte hizo posible que Mateo est&eacute; hoy en Portugal representando a la Argentina. &#127462;&#127479;</p>
         </div>
     </div>
 </section>
@@ -999,69 +1173,9 @@
     </div>
 </section>
 
-<!-- Cost Breakdown -->
-<section class="breakdown-section">
-    <div class="breakdown-card fade-in">
-        <h2>Destino de los fondos</h2>
-        <p>Son 15 jugadores y 1 oficial. El delegado abona su propio pasaje. El costo por jugador es de <strong>USD $4.000</strong>.</p>
-        <div class="breakdown-items">
-            <div class="breakdown-item">
-                <div class="icon">&#9992;&#65039;</div>
-                <div class="label">A&eacute;reos</div>
-                <div class="amount">$1.460</div>
-            </div>
-            <div class="breakdown-item">
-                <div class="icon">&#127976;</div>
-                <div class="label">Alojamiento torneo</div>
-                <div class="amount">$1.992</div>
-            </div>
-            <div class="breakdown-item">
-                <div class="icon">&#127860;&#65039;</div>
-                <div class="label">Comidas</div>
-                <div class="amount">$169</div>
-            </div>
-            <div class="breakdown-item">
-                <div class="icon">&#9749;</div>
-                <div class="label">Meriendas torneo</div>
-                <div class="amount">$95</div>
-            </div>
-            <div class="breakdown-item">
-                <div class="icon">&#127869;&#65039;</div>
-                <div class="label">Seguro m&eacute;dico</div>
-                <div class="amount">$137</div>
-            </div>
-            <div class="breakdown-item">
-                <div class="icon">&#128085;</div>
-                <div class="label">Indumentarias</div>
-                <div class="amount">$79</div>
-            </div>
-            <div class="breakdown-item">
-                <div class="icon">&#128203;</div>
-                <div class="label">Imprevistos</div>
-                <div class="amount">$68</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- How to Donate -->
-<section class="how-section" id="donar">
-    <div class="how-card fade-in">
-        <h2>Colecta cerrada</h2>
-        <div class="how-grid" style="grid-template-columns: 1fr;">
-            <div class="how-option">
-                <div class="flag">&#10003; &#127462;&#127479;</div>
-                <h3>&iexcl;Gracias por tu apoyo!</h3>
-                <p>La colecta ya est&aacute; cerrada. Gracias a todos los que colaboraron, Mateo ya viaja rumbo al Mundial. En los pr&oacute;ximos d&iacute;as compartiremos fotos y videos de la experiencia.</p>
-                <span class="btn btn-closed">Colecta cerrada</span>
-            </div>
-        </div>
-    </div>
-</section>
-
 <!-- CTA -->
 <section class="cta-section fade-in">
-    <p>Si no pod&eacute;s colaborar econ&oacute;micamente, <strong>compartir esta p&aacute;gina</strong> tambi&eacute;n ayuda un mont&oacute;n.</p>
+    <p><strong>Compart&iacute; esta p&aacute;gina</strong> para seguir a Mateo y a la Selecci&oacute;n en el Mundial.</p>
     <div class="btn-row">
         <a href="#" class="btn share-btn" onclick="shareWhatsApp(); return false;">
             <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -1080,7 +1194,7 @@
 
 <!-- Footer -->
 <footer>
-    <p>Hecho con &#10084;&#65039; para Mateo &middot; Toda donaci&oacute;n se destina &iacute;ntegramente a costear el viaje al Mundial Sub-18 de Waterpolo en Portugal 2026</p>
+    <p>Hecho con &#10084;&#65039; para Mateo &middot; Siguiendo a la Selecci&oacute;n Argentina en el Mundial Sub-18 de Waterpolo &middot; Portugal 2026</p>
 </footer>
 
 <!-- Lightbox -->
@@ -1115,15 +1229,21 @@
         const percent = Math.min(Math.round((totalRaised / goal) * 100), 100);
         const donorCount = donationData.donations.length;
 
-        // Animate progress
-        setTimeout(() => {
-            document.getElementById('progressBar').style.width = percent + '%';
-            animateCounter('raised', totalRaised);
-            animateCounter('progressPercent', percent, false);
-        }, 500);
+        // Animate progress (solo si la barra existe en la p\u00e1gina)
+        const progressBar = document.getElementById('progressBar');
+        if (progressBar) {
+            setTimeout(() => {
+                progressBar.style.width = percent + '%';
+                animateCounter('raised', totalRaised);
+                animateCounter('progressPercent', percent, false);
+            }, 500);
+        }
 
-        document.getElementById('donorCount').textContent = donorCount;
-        document.getElementById('supportersCountBadge').textContent =
+        const donorCountEl = document.getElementById('donorCount');
+        if (donorCountEl) donorCountEl.textContent = donorCount;
+
+        const badge = document.getElementById('supportersCountBadge');
+        if (badge) badge.textContent =
             donorCount + (donorCount === 1 ? ' donaci\u00f3n' : ' donaciones');
 
         renderSupporters('recent');
@@ -1227,6 +1347,7 @@
 
     function animateCounter(id, target, isCurrency = true) {
         const el = document.getElementById(id);
+        if (!el) return;
         if (target === 0) {
             el.textContent = isCurrency ? '$0' : '0';
             return;
