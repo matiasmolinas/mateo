@@ -1026,10 +1026,60 @@
 
         .tl-img:hover { transform: scale(1.01); }
 
+        /* Próximos partidos (fixture) */
+        .tl-entry.upcoming { border-left-color: var(--gold); }
+
+        .fixture-list {
+            list-style: none;
+            margin: 4px 0 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .fixture-list li {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            gap: 12px;
+            background: var(--gray-50);
+            border-radius: 12px;
+            padding: 14px 18px;
+        }
+
+        .fixture-list .fx-day {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--celeste-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .fixture-list .fx-vs {
+            font-weight: 700;
+            color: var(--gray-800);
+        }
+
+        .fixture-list .fx-time {
+            font-weight: 800;
+            color: var(--blue-deep);
+            background: white;
+            border: 1px solid var(--gray-200);
+            border-radius: 100px;
+            padding: 2px 12px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
         @media (max-width: 768px) {
             .tl-entry { padding: 24px; }
             .media-grid { grid-template-columns: repeat(2, 1fr); }
             .media-videos { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 480px) {
+            .fixture-list li { grid-template-columns: 1fr auto; }
+            .fixture-list .fx-day { grid-column: 1 / -1; }
         }
 
         /* Animation on scroll */
@@ -1064,6 +1114,33 @@
     <p class="timeline-intro">El d&iacute;a a d&iacute;a de Mateo y la Selecci&oacute;n en Portugal &middot; lo m&aacute;s reciente primero</p>
 
     <div class="timeline">
+
+        <!-- Próximos partidos -->
+        <div class="tl-entry upcoming fade-in">
+            <span class="tl-when">Lo que viene</span>
+            <h3>&#128197; Pr&oacute;ximos partidos de Argentina</h3>
+            <ul class="fixture-list">
+                <li>
+                    <span class="fx-day">Ma&ntilde;ana &middot; Martes 30</span>
+                    <span class="fx-vs">&#127462;&#127482; vs Australia</span>
+                    <span class="fx-time">8:00</span>
+                </li>
+                <li>
+                    <span class="fx-day">Mi&eacute;rcoles 1/7</span>
+                    <span class="fx-vs">&#127469;&#127472; vs Hong Kong</span>
+                    <span class="fx-time">6:30</span>
+                </li>
+                <li>
+                    <span class="fx-day">Jueves 2/7</span>
+                    <span class="fx-vs">&#127480;&#127468; vs Singapur</span>
+                    <span class="fx-time">5:00</span>
+                </li>
+            </ul>
+            <p>Horarios en hora de Argentina. Segu&iacute; los resultados y la agenda completa en el sitio oficial:</p>
+            <p style="text-align:center;">
+                <a href="https://www.worldaquatics.com/competitions/5137/world-aquatics-men-s-u18-water-polo-championships-2026/schedule?phase=All" target="_blank" rel="noopener" class="btn btn-mp">&#128202; Resultados y fixture oficial</a>
+            </p>
+        </div>
 
         <!-- Hoy: Argentina vs Portugal -->
         <div class="tl-entry fade-in">
